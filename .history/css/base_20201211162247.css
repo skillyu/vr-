@@ -1,0 +1,142 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#photosphere {
+  width: 100%;
+  height: 100%;
+}
+
+.psv-button.custom-button {
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.psv-loader {
+  overflow: hidden;
+  -webkit-border-radius: 170px;
+  -moz-border-radius: 170px;
+  border-radius: 170px;
+}
+
+.psv-loader canvas {
+  display: none;
+}
+
+.psv-loader img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px !important;
+  width: 400px;
+  max-height: 290px !important;
+  height: 290px !important;
+  -webkit-border-radius: 200px !important;
+  -moz-border-radius: 200px !important;
+  border-radius: 200px !important;
+}
+
+.playBtn {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 34px;
+  height: 34px;
+  background: url(../img/pause.png);
+  background-size: 100% 100%;
+  z-index: 999999999;
+  display: none;
+}
+
+.pause {
+  background: url(../img/play.png);
+  background-size: 100% 100%;
+}
+
+.szovo {
+  width: 100%;
+  height: 100%;
+  -webkit-perspective: 600;
+  perspective: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url(../img/timg.jpg);
+  background-size: 100% 100%;
+}
+
+.szovo svg {
+  width: 240px;
+  height: 240px;
+}
+
+.dc-logo {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.dc-logo:hover svg {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: arrow-spin 2.5s 0s cubic-bezier(0.165, 0.84, 0.44, 1)
+    infinite;
+  animation: arrow-spin 2.5s 0s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.dc-logo:hover:hover:before {
+  content: "\2764";
+  padding: 6px;
+  font: 10px/1 Monaco, sans-serif;
+  font-size: 10px;
+  color: #00fffe;
+  text-transform: uppercase;
+  position: absolute;
+  left: -70px;
+  top: -30px;
+  white-space: nowrap;
+  z-index: 20px;
+  box-shadow: 0px 0px 4px #222;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dc-logo:hover:hover:after {
+  content: "Digital Craft";
+  padding: 6px;
+  font: 10px/1 Monaco, sans-serif;
+  font-size: 10px;
+  color: #6e6f71;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  top: -30px;
+  white-space: nowrap;
+  z-index: 20px;
+  box-shadow: 0px 0px 4px #222;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: none;
+}
+
+@-webkit-keyframes arrow-spin {
+  50% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes arrow-spin {
+  50% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
